@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import promo1 from '@/assets/promo-1.jpg';
 import promo2 from '@/assets/promo-2.jpg';
 import promo3 from '@/assets/promo-3.jpg';
@@ -12,38 +13,30 @@ const promotions = [
   {
     id: 1,
     image: promo1,
-    title: 'Promocja na klocki hamulcowe',
-    description: 'Do -30% na wybrane zestawy',
+    title: 'Масло',
+    description: 'Моторные масла от ведущих производителей',
+    link: '/category/oil',
   },
   {
     id: 2,
     image: promo2,
-    title: 'Oleje silnikowe w super cenach',
-    description: 'Sprawdź naszą ofertę olejów',
+    title: 'Средства по уходу за автомобилем',
+    description: 'Профессиональная автокосметика',
+    link: '/category/carcare',
   },
   {
     id: 3,
     image: promo3,
-    title: 'Filtry powietrza i oleju',
-    description: 'Najwyższa jakość w promocji',
+    title: 'Комплекты фильтров',
+    description: 'Полные комплекты для ТО',
+    link: '/category/filters',
   },
   {
     id: 4,
     image: promo4,
-    title: 'Zawieszenie samochodowe',
-    description: 'Amortyzatory i sprężyny -20%',
-  },
-  {
-    id: 5,
-    image: promo5,
-    title: 'Oświetlenie LED',
-    description: 'Nowoczesne reflektory w promocji',
-  },
-  {
-    id: 6,
-    image: promo6,
-    title: 'Akumulatory samochodowe',
-    description: 'Wybrane modele w super cenach',
+    title: 'Автохимия',
+    description: 'Жидкости и присадки высокого качества',
+    link: '/category/chemistry',
   },
 ];
 
@@ -72,21 +65,21 @@ const PromotionsSection = () => {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {promotions.map((promo) => (
-              <div key={promo.id} className="w-full flex-shrink-0">
-                <div className="relative h-[400px] lg:h-[500px]">
+              <Link key={promo.id} to={promo.link} className="w-full flex-shrink-0">
+                <div className="relative h-[400px] lg:h-[500px] cursor-pointer group">
                   <img
                     src={promo.image}
                     alt={promo.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent flex items-end">
                     <div className="p-8 lg:p-12">
-                      <h3 className="text-3xl lg:text-4xl font-bold mb-2">{promo.title}</h3>
+                      <h3 className="text-3xl lg:text-4xl font-bold mb-2 group-hover:text-primary transition-smooth">{promo.title}</h3>
                       <p className="text-xl text-foreground/80">{promo.description}</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
