@@ -11,8 +11,8 @@ import product6 from '@/assets/product-6.jpg';
 
 const categoryData = {
   oil: {
-    title: 'Масло',
-    description: 'Высококачественные моторные масла для всех типов двигателей. Мы предлагаем широкий выбор синтетических, полусинтетических и минеральных масел от ведущих мировых производителей.',
+    title: 'Oleje',
+    description: 'Wysokiej jakości oleje silnikowe dla wszystkich typów silników. Oferujemy szeroki wybór olejów syntetycznych, półsyntetycznych i mineralnych od wiodących światowych producentów.',
     products: [
       { id: 1, name: 'Castrol EDGE 5W-30', price: '189.99 zł', image: product1 },
       { id: 2, name: 'Mobil 1 0W-40', price: '209.99 zł', image: product2 },
@@ -32,66 +32,66 @@ const categoryData = {
     ],
   },
   carcare: {
-    title: 'Средства по уходу за автомобилем',
-    description: 'Профессиональная автокосметика и химия для ухода за автомобилем. Шампуни, воски, полироли, очистители и защитные покрытия для безупречного внешнего вида вашего автомобиля.',
+    title: 'Produkty do pielęgnacji samochodu',
+    description: 'Profesjonalna kosmetyka samochodowa i chemia do pielęgnacji pojazdu. Szampony, woski, politury, środki czyszczące i powłoki ochronne dla nieskazitelnego wyglądu Twojego samochodu.',
     products: [
-      { id: 1, name: 'Автошампунь концентрат 1л', price: '39.99 zł', image: product1 },
-      { id: 2, name: 'Воск для кузова', price: '69.99 zł', image: product2 },
-      { id: 3, name: 'Полироль для пластика', price: '29.99 zł', image: product3 },
-      { id: 4, name: 'Очиститель стекол 500мл', price: '24.99 zł', image: product4 },
-      { id: 5, name: 'Антидождь для стекол', price: '49.99 zł', image: product5 },
-      { id: 6, name: 'Очиститель дисков', price: '34.99 zł', image: product6 },
-      { id: 7, name: 'Полироль для фар', price: '59.99 zł', image: product1 },
-      { id: 8, name: 'Чернитель шин', price: '27.99 zł', image: product2 },
-      { id: 9, name: 'Очиститель двигателя', price: '44.99 zł', image: product3 },
-      { id: 10, name: 'Защитное покрытие керамика', price: '149.99 zł', image: product4 },
-      { id: 11, name: 'Салфетки микрофибра набор', price: '39.99 zł', image: product5 },
-      { id: 12, name: 'Очиститель салона', price: '32.99 zł', image: product6 },
-      { id: 13, name: 'Антистатик для пластика', price: '25.99 zł', image: product1 },
-      { id: 14, name: 'Кондиционер для кожи', price: '54.99 zł', image: product2 },
-      { id: 15, name: 'Пена для мойки бесконтактная', price: '64.99 zł', image: product3 },
+      { id: 1, name: 'Szampon samochodowy koncentrat 1l', price: '39.99 zł', image: product1 },
+      { id: 2, name: 'Wosk do karoserii', price: '69.99 zł', image: product2 },
+      { id: 3, name: 'Politura do plastiku', price: '29.99 zł', image: product3 },
+      { id: 4, name: 'Płyn do szyb 500ml', price: '24.99 zł', image: product4 },
+      { id: 5, name: 'Preparat hydrofobowy', price: '49.99 zł', image: product5 },
+      { id: 6, name: 'Środek do mycia felg', price: '34.99 zł', image: product6 },
+      { id: 7, name: 'Pasta do reflektorów', price: '59.99 zł', image: product1 },
+      { id: 8, name: 'Nabłyszczacz do opon', price: '27.99 zł', image: product2 },
+      { id: 9, name: 'Środek do czyszczenia silnika', price: '44.99 zł', image: product3 },
+      { id: 10, name: 'Powłoka ceramiczna', price: '149.99 zł', image: product4 },
+      { id: 11, name: 'Ściereczki mikrofibra zestaw', price: '39.99 zł', image: product5 },
+      { id: 12, name: 'Środek do czyszczenia wnętrza', price: '32.99 zł', image: product6 },
+      { id: 13, name: 'Antystatyk do plastiku', price: '25.99 zł', image: product1 },
+      { id: 14, name: 'Odżywka do skóry', price: '54.99 zł', image: product2 },
+      { id: 15, name: 'Piana aktywna do mycia', price: '64.99 zł', image: product3 },
     ],
   },
   filters: {
-    title: 'Комплекты фильтров',
-    description: 'Полные комплекты фильтров для технического обслуживания автомобиля. Масляные, воздушные, топливные и салонные фильтры высокого качества для всех марок автомобилей.',
+    title: 'Zestawy filtrów',
+    description: 'Komplety filtrów do przeglądu technicznego. Filtry oleju, powietrza, paliwa i kabinowe najwyższej jakości dla wszystkich marek samochodów.',
     products: [
-      { id: 1, name: 'Комплект фильтров VW/Audi', price: '129.99 zł', image: product1 },
-      { id: 2, name: 'Комплект фильтров BMW', price: '149.99 zł', image: product2 },
-      { id: 3, name: 'Комплект фильтров Mercedes', price: '159.99 zł', image: product3 },
-      { id: 4, name: 'Комплект фильтров Ford', price: '99.99 zł', image: product4 },
-      { id: 5, name: 'Комплект фильтров Opel', price: '89.99 zł', image: product5 },
-      { id: 6, name: 'Комплект фильтров Toyota', price: '119.99 zł', image: product6 },
-      { id: 7, name: 'Комплект фильтров Honda', price: '109.99 zł', image: product1 },
-      { id: 8, name: 'Комплект фильтров Renault', price: '94.99 zł', image: product2 },
-      { id: 9, name: 'Комплект фильтров Peugeot', price: '99.99 zł', image: product3 },
-      { id: 10, name: 'Комплект фильтров Skoda', price: '119.99 zł', image: product4 },
-      { id: 11, name: 'Комплект фильтров Seat', price: '114.99 zł', image: product5 },
-      { id: 12, name: 'Комплект фильтров Mazda', price: '104.99 zł', image: product6 },
-      { id: 13, name: 'Комплект фильтров Hyundai', price: '89.99 zł', image: product1 },
-      { id: 14, name: 'Комплект фильтров Kia', price: '94.99 zł', image: product2 },
-      { id: 15, name: 'Комплект фильтров Nissan', price: '109.99 zł', image: product3 },
+      { id: 1, name: 'Zestaw filtrów VW/Audi', price: '129.99 zł', image: product1 },
+      { id: 2, name: 'Zestaw filtrów BMW', price: '149.99 zł', image: product2 },
+      { id: 3, name: 'Zestaw filtrów Mercedes', price: '159.99 zł', image: product3 },
+      { id: 4, name: 'Zestaw filtrów Ford', price: '99.99 zł', image: product4 },
+      { id: 5, name: 'Zestaw filtrów Opel', price: '89.99 zł', image: product5 },
+      { id: 6, name: 'Zestaw filtrów Toyota', price: '119.99 zł', image: product6 },
+      { id: 7, name: 'Zestaw filtrów Honda', price: '109.99 zł', image: product1 },
+      { id: 8, name: 'Zestaw filtrów Renault', price: '94.99 zł', image: product2 },
+      { id: 9, name: 'Zestaw filtrów Peugeot', price: '99.99 zł', image: product3 },
+      { id: 10, name: 'Zestaw filtrów Skoda', price: '119.99 zł', image: product4 },
+      { id: 11, name: 'Zestaw filtrów Seat', price: '114.99 zł', image: product5 },
+      { id: 12, name: 'Zestaw filtrów Mazda', price: '104.99 zł', image: product6 },
+      { id: 13, name: 'Zestaw filtrów Hyundai', price: '89.99 zł', image: product1 },
+      { id: 14, name: 'Zestaw filtrów Kia', price: '94.99 zł', image: product2 },
+      { id: 15, name: 'Zestaw filtrów Nissan', price: '109.99 zł', image: product3 },
     ],
   },
   chemistry: {
-    title: 'Автохимия',
-    description: 'Профессиональная автомобильная химия для обслуживания и ремонта. Жидкости, смазки, герметики, присадки и специальные составы для эффективного ухода за автомобилем.',
+    title: 'Chemia samochodowa',
+    description: 'Profesjonalna chemia samochodowa do serwisu i napraw. Płyny, smary, uszczelniacze, dodatki i specjalne preparaty do skutecznej pielęgnacji samochodu.',
     products: [
-      { id: 1, name: 'Антифриз G12+ 5л', price: '79.99 zł', image: product1 },
-      { id: 2, name: 'Жидкость тормозная DOT4', price: '29.99 zł', image: product2 },
-      { id: 3, name: 'Очиститель карбюратора', price: '24.99 zł', image: product3 },
-      { id: 4, name: 'WD-40 многофункциональная смазка', price: '34.99 zł', image: product4 },
-      { id: 5, name: 'Герметик для прокладок', price: '39.99 zł', image: product5 },
-      { id: 6, name: 'Присадка в двигатель', price: '89.99 zł', image: product6 },
-      { id: 7, name: 'Очиститель инжекторов', price: '44.99 zł', image: product1 },
-      { id: 8, name: 'Размораживатель замков', price: '19.99 zł', image: product2 },
-      { id: 9, name: 'Очиститель DPF-фильтра', price: '99.99 zł', image: product3 },
-      { id: 10, name: 'Присадка в топливо', price: '49.99 zł', image: product4 },
-      { id: 11, name: 'Жидкость ГУР', price: '34.99 zł', image: product5 },
-      { id: 12, name: 'Смазка медная высокотемпературная', price: '29.99 zł', image: product6 },
-      { id: 13, name: 'Герметик радиатора', price: '39.99 zł', image: product1 },
-      { id: 14, name: 'Очиститель кондиционера', price: '54.99 zł', image: product2 },
-      { id: 15, name: 'Антикоррозийная защита днища', price: '119.99 zł', image: product3 },
+      { id: 1, name: 'Płyn chłodniczy G12+ 5l', price: '79.99 zł', image: product1 },
+      { id: 2, name: 'Płyn hamulcowy DOT4', price: '29.99 zł', image: product2 },
+      { id: 3, name: 'Środek do czyszczenia gaźnika', price: '24.99 zł', image: product3 },
+      { id: 4, name: 'WD-40 preparat wielofunkcyjny', price: '34.99 zł', image: product4 },
+      { id: 5, name: 'Uszczelniacz do uszczelek', price: '39.99 zł', image: product5 },
+      { id: 6, name: 'Dodatek do silnika', price: '89.99 zł', image: product6 },
+      { id: 7, name: 'Środek do czyszczenia wtryskiwaczy', price: '44.99 zł', image: product1 },
+      { id: 8, name: 'Rozmrażacz do zamków', price: '19.99 zł', image: product2 },
+      { id: 9, name: 'Środek do czyszczenia DPF', price: '99.99 zł', image: product3 },
+      { id: 10, name: 'Dodatek do paliwa', price: '49.99 zł', image: product4 },
+      { id: 11, name: 'Olej do wspomagania', price: '34.99 zł', image: product5 },
+      { id: 12, name: 'Pasta miedziana wysokotemperaturowa', price: '29.99 zł', image: product6 },
+      { id: 13, name: 'Uszczelniacz chłodnicy', price: '39.99 zł', image: product1 },
+      { id: 14, name: 'Środek do czyszczenia klimatyzacji', price: '54.99 zł', image: product2 },
+      { id: 15, name: 'Ochrona antykorozyjna podwozia', price: '119.99 zł', image: product3 },
     ],
   },
 };
@@ -104,9 +104,9 @@ const CategoryPage = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Категория не найдена</h1>
+          <h1 className="text-4xl font-bold mb-4">Kategoria nie znaleziona</h1>
           <Link to="/" className="text-primary hover:underline">
-            Вернуться на главную
+            Powrót do strony głównej
           </Link>
         </div>
       </div>
@@ -125,7 +125,7 @@ const CategoryPage = () => {
               className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-smooth mb-8"
             >
               <ArrowLeft className="w-5 h-5" />
-              <span>Назад на главную</span>
+              <span>Powrót do strony głównej</span>
             </Link>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">

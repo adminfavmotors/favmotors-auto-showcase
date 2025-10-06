@@ -47,31 +47,31 @@ const RequestPage = () => {
             <div class="container">
               <div class="header">
                 <h1>FAV<span class="brand">MOTORS</span></h1>
-                <p style="margin: 10px 0 0 0;">Новый запрос от клиента</p>
+                <p style="margin: 10px 0 0 0;">Nowe zapytanie od klienta</p>
               </div>
               <div class="content">
                 <div class="field">
-                  <div class="field-label">Имя клиента</div>
+                  <div class="field-label">Imię klienta</div>
                   <div class="field-value">${formData.name}</div>
                 </div>
                 
                 <div class="field">
-                  <div class="field-label">Способ связи</div>
+                  <div class="field-label">Sposób kontaktu</div>
                   <div class="field-value">${formData.contactMethod}</div>
                 </div>
                 
                 <div class="field">
-                  <div class="field-label">VIN номер</div>
-                  <div class="field-value">${formData.vin || 'Не указан'}</div>
+                  <div class="field-label">Numer VIN</div>
+                  <div class="field-value">${formData.vin || 'Nie podano'}</div>
                 </div>
                 
                 <div class="question-field">
-                  <div class="field-label" style="margin-bottom: 10px;">Вопрос / Запрос</div>
+                  <div class="field-label" style="margin-bottom: 10px;">Pytanie / Zapytanie</div>
                   <div class="field-value" style="white-space: pre-wrap;">${formData.question}</div>
                 </div>
                 
                 <div class="footer">
-                  <p>Получено через форму запроса на сайте FAVMOTORS</p>
+                  <p>Otrzymano przez formularz zapytań na stronie FAVMOTORS</p>
                   <p>${new Date().toLocaleString('pl-PL')}</p>
                 </div>
               </div>
@@ -80,18 +80,18 @@ const RequestPage = () => {
         </html>
       `;
 
-      // Отправка письма (здесь используется mailto, для реальной отправки нужен backend)
-      const subject = encodeURIComponent(`Новый запрос от ${formData.name}`);
+      // Отправка письма через mailto
+      const subject = encodeURIComponent(`Nowe zapytanie od ${formData.name}`);
       const body = encodeURIComponent(
-        `Имя: ${formData.name}\n\nСпособ связи: ${formData.contactMethod}\n\nVIN: ${formData.vin || 'Не указан'}\n\nВопрос:\n${formData.question}`
+        `Imię: ${formData.name}\n\nSposób kontaktu: ${formData.contactMethod}\n\nVIN: ${formData.vin || 'Nie podano'}\n\nPytanie:\n${formData.question}`
       );
       
       // Открываем почтовый клиент
       window.location.href = `mailto:admin@favmotors.com?subject=${subject}&body=${body}`;
 
       toast({
-        title: 'Запрос отправлен!',
-        description: 'Мы свяжемся с вами в ближайшее время.',
+        title: 'Zapytanie wysłane!',
+        description: 'Skontaktujemy się z Tobą w najbliższym czasie.',
       });
 
       // Очищаем форму
@@ -103,8 +103,8 @@ const RequestPage = () => {
       });
     } catch (error) {
       toast({
-        title: 'Ошибка',
-        description: 'Не удалось отправить запрос. Попробуйте позже.',
+        title: 'Błąd',
+        description: 'Nie udało się wysłać zapytania. Spróbuj ponownie później.',
         variant: 'destructive',
       });
     } finally {
@@ -123,75 +123,75 @@ const RequestPage = () => {
               className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-smooth mb-8"
             >
               <ArrowLeft className="w-5 h-5" />
-              <span>Назад на главную</span>
+              <span>Powrót do strony głównej</span>
             </Link>
 
             <div className="max-w-2xl mx-auto">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                Выслать <span className="text-primary">запрос</span>
+                Wyślij <span className="text-primary">zapytanie</span>
               </h1>
               <p className="text-xl text-foreground/80 mb-12">
-                Заполните форму ниже, и мы свяжемся с вами в ближайшее время.
+                Wypełnij formularz poniżej, a skontaktujemy się z Tobą w najbliższym czasie.
               </p>
 
               <form onSubmit={handleSubmit} className="bg-card p-8 rounded-xl shadow-elegant">
                 <div className="space-y-6">
                   {/* Имя */}
                   <div>
-                    <Label htmlFor="name">Имя *</Label>
+                    <Label htmlFor="name">Imię *</Label>
                     <Input
                       id="name"
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Введите ваше имя"
+                      placeholder="Wprowadź swoje imię"
                       className="mt-2"
                     />
                   </div>
 
                   {/* Способ связи */}
                   <div>
-                    <Label htmlFor="contactMethod">Способ связи *</Label>
+                    <Label htmlFor="contactMethod">Sposób kontaktu *</Label>
                     <Input
                       id="contactMethod"
                       type="text"
                       required
                       value={formData.contactMethod}
                       onChange={(e) => setFormData({ ...formData, contactMethod: e.target.value })}
-                      placeholder="Телефон, email, никнейм в Facebook или Instagram"
+                      placeholder="Telefon, email, nick na Facebooku lub Instagramie"
                       className="mt-2"
                     />
                     <p className="text-sm text-foreground/60 mt-1">
-                      Укажите удобный для вас способ связи
+                      Podaj wygodny dla siebie sposób kontaktu
                     </p>
                   </div>
 
                   {/* VIN */}
                   <div>
-                    <Label htmlFor="vin">VIN номер</Label>
+                    <Label htmlFor="vin">Numer VIN</Label>
                     <Input
                       id="vin"
                       type="text"
                       value={formData.vin}
                       onChange={(e) => setFormData({ ...formData, vin: e.target.value })}
-                      placeholder="Введите VIN автомобиля (если известен)"
+                      placeholder="Wprowadź numer VIN pojazdu (jeśli znany)"
                       className="mt-2"
                     />
                     <p className="text-sm text-foreground/60 mt-1">
-                      VIN поможет нам точнее подобрать нужные запчасти
+                      VIN pomoże nam dokładniej dobrać potrzebne części
                     </p>
                   </div>
 
                   {/* Вопрос */}
                   <div>
-                    <Label htmlFor="question">Ваш вопрос / запрос *</Label>
+                    <Label htmlFor="question">Twoje pytanie / zapytanie *</Label>
                     <Textarea
                       id="question"
                       required
                       value={formData.question}
                       onChange={(e) => setFormData({ ...formData, question: e.target.value })}
-                      placeholder="Здесь вы можете указать перечень интересующих вас запчастей, производителей, ценовую категорию или любые другие вопросы"
+                      placeholder="Tutaj możesz podać listę interesujących Cię części, producentów, kategorię cenową lub inne pytania"
                       className="mt-2 min-h-[150px]"
                     />
                   </div>
@@ -201,7 +201,7 @@ const RequestPage = () => {
                     disabled={isSubmitting}
                     className="w-full gradient-red text-white font-semibold py-6 text-lg shadow-glow hover:scale-105 transition-smooth"
                   >
-                    {isSubmitting ? 'Отправка...' : 'Отправить запрос'}
+                    {isSubmitting ? 'Wysyłanie...' : 'Wyślij zapytanie'}
                   </Button>
                 </div>
               </form>

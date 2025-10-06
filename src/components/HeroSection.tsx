@@ -3,7 +3,7 @@ import heroBg from '@/assets/hero-bg.jpg';
 // <!-- Sekcja O nas -->
 const HeroSection = () => {
   return (
-    <section id="o-nas" className="relative min-h-screen flex items-center">
+    <section id="o-nas" className="relative min-h-screen flex items-center pt-20">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
